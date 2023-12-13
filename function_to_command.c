@@ -20,7 +20,7 @@ void function_to_command(char *opcode, char *value, int ln, int format)
 		{"pint", PrintTopElement},
 		{"pop", Pop},
 		{"nop", nop},
-		{"swap", swap_nodes},
+		{"swap", Switch},
 		{"add", add_nodes},
 		{"sub", sub_nodes},
 		{"div", div_nodes},
