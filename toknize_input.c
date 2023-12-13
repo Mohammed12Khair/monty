@@ -16,7 +16,7 @@ int toknizeInput(char *buffer, int line_number, int format)
 	const char *delim = "\n ";
 
 	if (buffer == NULL)
-		err(4);
+		Error(4);
 
 	opration_code = strtok(buffer, delim);
 	if (opration_code == NULL)

@@ -37,6 +37,6 @@ void function_to_command(char *opcode, char *value, int ln, int format)
 		}
 	}
 	if (flag == 1)
-		err(3, ln, opcode);
+		Error(3, ln, opcode);
 }
 

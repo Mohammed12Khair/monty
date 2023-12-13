@@ -23,11 +23,11 @@ void command_call(op_func func, char *op, char *val, int ln, int format)
 			flag = -1;
 		}
 		if (val == NULL)
-			err(5, ln);
+			Error(5, ln);
 		for (i = 0; val[i] != '\0'; i++)
 		{
 			if (isdigit(val[i]) == 0)
-				err(5, ln);
+				Error(5, ln);
 		}
 		node = create_node(atoi(val) * flag);
 		if (format == 0)
