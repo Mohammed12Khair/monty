@@ -54,5 +54,5 @@ void Pop(stack_t **stack, unsigned int line_number);
 void PrintTopElement(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void Switch(stack_t **stack, unsigned int line_number);
-void Sum_nodes(stack_t **stack, unsigned int line_number)
+void Sum_nodes(stack_t **stack, unsigned int line_number);
 #endif
