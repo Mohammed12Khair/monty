@@ -59,4 +59,5 @@ void Error(int error_code, ...);
 void ERROR(int error_code, ...);
 void free_nodes(void);
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
+void sub_nodes(stack_t **stack, unsigned int line_number);
 #endif
