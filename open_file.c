@@ -12,6 +12,6 @@ void openFile(char *file_name)
 	if (file_name == NULL || file == NULL)
 		Error(2, file_name);
 
-	read_file(file);
+	readFile(file);
 	fclose(file);
 }

@@ -28,6 +28,6 @@ int toknizeInput(char *buffer, int line_number, int format)
 	if (strcmp(opration_code, "queue") == 0)
 		return (1);
 
-	find_func(opration_code, value, line_number, format);
+	function_to_command(opration_code, value, line_number, format);
 	return (format);
 }

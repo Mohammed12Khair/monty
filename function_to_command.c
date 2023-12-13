@@ -32,7 +32,7 @@ void function_to_command(char *opcode, char *value, int ln, int format)
 	{
 		if (strcmp(opcode, func_list[i].opcode) == 0)
 		{
-			call_fun(func_list[i].f, opcode, value, ln, format);
+			command_call(func_list[i].f, opcode, value, ln, format);
 			flag = 0;
 		}
 	}

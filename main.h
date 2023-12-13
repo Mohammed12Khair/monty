@@ -42,7 +42,7 @@ typedef struct instruction_s
 
 extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
-
+stack_t *create_node(int n);
 void openFile(char *file_name);
 void readFile(FILE *file);
 int toknizeInput(char *buffer, int line_number, int format);
@@ -57,4 +57,6 @@ void Switch(stack_t **stack, unsigned int line_number);
 void Sum_nodes(stack_t **stack, unsigned int line_number);
 void Error(int error_code, ...);
 void ERROR(int error_code, ...);
+void free_nodes(void);
+void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
 #endif

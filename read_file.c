@@ -14,7 +14,7 @@ void readFile(FILE *file)
 
 	for (line_number = 1; getline(&buffer, &len, file) != -1; line_number++)
 	{
-		format = parse_line(buffer, line_number, format);
+		format = toknizeInput(buffer, line_number, format);
 	}
 	free(buffer);
 }
