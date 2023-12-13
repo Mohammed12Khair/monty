@@ -23,6 +23,7 @@ void function_to_command(char *opcode, char *value, int ln, int format)
 		{"swap", Switch},
 		{"add", Sum_nodes},
 		{"sub", sub_nodes},
+		{"div", div_nodes},
 		{NULL, NULL}
 	};
 

@@ -48,6 +48,7 @@ void readFile(FILE *file);
 int toknizeInput(char *buffer, int line_number, int format);
 void function_to_command(char *opcode, char *value, int ln, int format);
 void command_call(op_func func, char *op, char *val, int ln, int format);
+
 void Push(stack_t **Element, __attribute__((unused))unsigned int ln);
 void list_stack(stack_t **stack, unsigned int line_number);
 void Pop(stack_t **stack, unsigned int line_number);
@@ -60,4 +61,5 @@ void ERROR(int error_code, ...);
 void free_nodes(void);
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
 void sub_nodes(stack_t **stack, unsigned int line_number);
+void div_nodes(stack_t **stack, unsigned int line_number);
 #endif

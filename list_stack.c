@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * list_stack - Lists the elements if a stack.
+ * list_stack - Lists the elements of a stack.
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: line number of  the opcode.
  */
