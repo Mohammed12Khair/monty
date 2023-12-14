@@ -1,21 +1,29 @@
-#include "main.h"
+#include "monty.h"
 /**
- * sub_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+  *f_sub- sustration
+  *@head: stack head
+  *@counter: line_number
+  *Return: no return
  */
-void sub_nodes(stack_t **stack, unsigned int line_number)
+void f_sub(stack_t **head, unsigned int counter)
 {
-	int sum;
+	stack_t *aux;
+	int sus, nodes;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-
-		ERROR(8, line_number, "sub");
-
-
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	aux = *head;
+	for (nodes = 0; aux != NULL; nodes++)
+		aux = aux->next;
+	if (nodes < 2)
+	{
+		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	aux = *head;
+	sus = aux->next->n - aux->n;
+	aux->next->n = sus;
+	*head = aux->next;
+	free(aux);
 }
